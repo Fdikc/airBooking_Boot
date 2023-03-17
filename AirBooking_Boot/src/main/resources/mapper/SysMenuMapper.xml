@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.bzu.fdick.mapper.SysMenuMapper">
+
+    <resultMap id="BaseResultMap" type="edu.bzu.fdick.domain.SysMenu">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="pid" column="pid" jdbcType="BIGINT"/>
+            <result property="path" column="path" jdbcType="VARCHAR"/>
+            <result property="component" column="component" jdbcType="VARCHAR"/>
+            <result property="icon" column="icon" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,pid,
+        path,component,icon
+    </sql>
+    <select id="getByUserId" resultMap="BaseResultMap">
+        select m.* from sys_menu m
+                            inner join sys_role_menu rm on m.id=rm.menu_id
+        where rm.role_id in
+              (
+                  select ur.role_id from sys_user_role ur
+                                             inner join sys_user u on ur.user_id=u.id
+                  where u.id = #{id,jdbcType=NUMERIC}
+              )
+    </select>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.bzu.fdick.mapper.FlightMapper">
+
+    <resultMap id="BaseResultMap" type="edu.bzu.fdick.domain.Flight">
+            <id property="flightId" column="flight_id" jdbcType="VARCHAR"/>
+            <result property="flightNumber" column="flight_number" jdbcType="VARCHAR"/>
+            <result property="flightStartPlace" column="flight_start_place" jdbcType="VARCHAR"/>
+            <result property="flightEndPlace" column="flight_end_place" jdbcType="VARCHAR"/>
+            <result property="flightStartAirport" column="flight_start_airport" jdbcType="VARCHAR"/>
+            <result property="flightEndAirport" column="flight_end_airport" jdbcType="VARCHAR"/>
+            <result property="flightStartTime" column="flight_start_time" jdbcType="TIMESTAMP"/>
+            <result property="flightEndTime" column="flight_end_time" jdbcType="TIMESTAMP"/>
+            <result property="flightHighPrice" column="flight_high_price" jdbcType="DOUBLE"/>
+            <result property="flightHighNumber" column="flight_high_number" jdbcType="INTEGER"/>
+
+            <result property="flightBasePrice" column="flight_base_price" jdbcType="DOUBLE"/>
+            <result property="flightBaseNumber" column="flight_base_number" jdbcType="INTEGER"/>
+            <result property="version" column="version" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        flight_id,flight_number,flight_start_place,
+        flight_end_place,flight_start_airport,flight_end_airport,
+        flight_start_time,flight_end_time,flight_high_price,
+        flight_high_number,
+        flight_base_price,flight_base_number,version
+    </sql>
+</mapper>

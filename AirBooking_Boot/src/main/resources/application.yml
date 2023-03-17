@@ -1,0 +1,46 @@
+
+server:
+  port: 8081
+  servlet:
+    context-path: /air_booking
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/air_booking?serverTimezone=GMT%2B8
+      username: root
+      password: 123456
+  mail:
+    username: cc_flipped@126.com
+    password: KBBEMLOFCIGETXWA
+    host: smtp.126.com
+#  redis:
+#    host: localhost
+#    port: 6379
+
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+
+
+
+
+alipay:
+  appId: 
+  privateKey:
+  publicKey: 
+  notifyUrl: http://68ebxw.natappfree.cc/air_booking/order/notify
+  refundNotifyUrl: http://68ebxw.natappfree.cc/air_booking/order/notify
+  returnUrl: http://localhost:7070/#/orderlist
+  gatewayUrl: https://openapi.alipaydev.com/gateway.do
+  charset: utf-8
+  signType: RSA2
+
+
+
+
+
+
