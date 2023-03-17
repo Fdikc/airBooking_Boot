@@ -42,12 +42,20 @@
 
 ![image-20230317110039413](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202303171100053.png)
 
-### 3、注册界面
+### 3、查询机票
+
+![image-20230317111705361](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202303171117450.png)
+
+
+
+
+
+### 4、注册界面
 
 > 采用**邮箱**注册
 
 ![image-20230317110112245](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202303171101813.png)
 
-### 4、支付界面
+### 5、支付界面
 
 ![image-20230317110347595](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202303171103702.png)
